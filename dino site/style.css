@@ -127,7 +127,7 @@ div.image-container-news {
     background: linear-gradient(rgba(176, 215, 255, 0.6),rgba(176, 215, 255, 0.6), rgba(166, 151, 108, 0.5)),url('images/background-scene-day-long.jpg') center / cover;
     min-height: 350vh;
     display: flex;
-    align-items: center;
+    justify-content: center;
 }
 
 div.image-container-species {
