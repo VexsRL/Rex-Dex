@@ -442,13 +442,34 @@ img.img-right {
 
 .requests {
     font-family: 'Contrail One', sans-serif;
-    margin-top: 100px;
     width: 80%;
     background-color: #efe6cf;
     /*background-color: #FFF1D9; */
     display: flex;
     justify-self: center;
-    border-radius: 10px;
+    border: none;
+    padding : 5px;
+    margin-top: 5px ;
+    border-radius: 4px;
+    color: #656565;
+    width: 100%;
+}
+
+.requests-send {
+    font-family: 'Contrail One', sans-serif;
+    background-color: #d2c39c;
+    /*background-color: #FFF1D9; */
+    display: flex;
+    justify-self: center;
+    border: none;
+    padding : 5px;
+    margin-top: 5px ;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #222222;
+    margin-bottom: 100px;
+    margin-top: 50px;
+    width: 33px;
 }
 
 .request-form {
@@ -562,3 +583,109 @@ img.img-right {
     height: 100%;
     width: 100%;
 }
+
+
+.navbar {
+    background-color: #885d3f;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    .burger-menu {
+    cursor: pointer;
+    display: none;
+}
+
+    .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 6px 0;
+}
+
+    .menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+    .menu li {
+    margin-right: 20px;
+}
+
+    .menu a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+    @media only screen and (max-width: 600px) {
+    .burger-menu {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+    }
+
+    .menu.show {
+        display: flex;
+    }
+
+    .menu li {
+        margin: 0;
+        text-align: center;
+        padding: 10px;
+        border-bottom: 1px solid #666;
+    }
+
+    .news-page {
+        display: none;
+    }
+    
+    .species-page {
+        display: none;
+    }
+    
+    .req-page {
+        display: none;
+    }
+    
+    }
+
+
+    @media only screen and (min-width: 600px) {
+        .burger-menu {
+            display: none;
+        }
+    
+        .menu {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 70px;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+        }
+    
+        .menu.show {
+            display: none;
+        }
+    
+        .menu li {
+            margin: 0;
+            text-align: center;
+            padding: 10px;
+            border-bottom: 1px solid #666;
+        }
+    }

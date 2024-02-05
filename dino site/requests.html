@@ -8,16 +8,37 @@
     <link href="https://fonts.googleapis.com/css2?family=Contrail+One&display=swap" rel="stylesheet">
     <title>REX-DEX | Request</title>
     <link rel="shortcut icon" type="/image/x-icon" href="/images/egg icon.png" />
+    <script src="script.js"></script>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
 
 <header>
+    
     <div>
         <a href="welcome.html">
             <img src="images/dino sans fond.png" alt="logo" class="logo">
         </a>
     </div>
+        
+    <div class="navbar">
+        <div class="burger-menu" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <ul class="menu" id="menu">
+            <li><a href="newspage.html">NEWS</a></li>
+            <li><a href="species.html">SPECIES</a></li>
+            <li><a href="requests.html">REQUEST</a></li>
+        </ul>
+    </div>
+
     <div class="tabs">
         <a href="newspage.html">
             <button class="news-page">
@@ -54,7 +75,70 @@
             <br/>
         </div>
 
-        <div class="requests">
+        <form action="/traitement-du-formulaire" method="post" onsubmit="return validerFormulaire()">
+            <div>
+                <input type="text" id="name" name="name" placeholder="Name" required class="requests">
+                <span id="labelName" class="hidden">Last name :</span>
+            </div>
+        
+            <div>
+                <input type="text" id="nickname" name="nickname" placeholder="Nickname" required class="requests">
+                <span id="labelNickname" class="hidden">First name :</span>
+            </div>
+        
+            <div>
+                <input type="number" id="age" name="age" placeholder="Age" required class="requests">
+                <span id="labelAge" class="hidden">Age :</span>
+            </div>
+        
+            <div>
+                <select id="country" name="country" required class="requests">
+                    <option value="default">Country</option>
+                    <option value="france">France</option>
+                    <option value="canada">Canada</option>
+                    <option value="belgium">Belgium</option>
+                    <option value="china">China</option>
+                    <option value="india">India</option>
+                    <option value="usa">United-States of America</option>
+                    <option value="russia">Russia</option>
+                    <option value="japan">Japan</option>
+                    <option value="italia">Italia</option>
+                    <option value="south korea">South Korea</option>
+                    <option value="ukraine">Ukraine</option>
+                    <option value="poland">Poland</option>
+                    <option value="australia">Australia</option>
+                    <option value="dutchland">Dutchland</option>
+                    <option value="sweden">Sweden</option>
+                    <option value="spain">Spain</option>
+                    <option value="finland">Finland</option>
+                    <option value="germany">Germany</option>
+                    <option value="switzerland">Switzerland</option>
+                    <option value="greece">Greece</option>
+                </select>
+                <span id="labelCountry" class="hidden">Country :</span>
+            </div>
+        
+            <div>
+                <textarea id="comment" name="comment" placeholder="Comment" rows="4" cols="50" class="requests"></textarea >
+                <span id="labelCommentaire" class="hidden">Comment :</span>
+            </div>
+        
+            <div>
+                <input type="text" id="speciesRequest" name="speciesRequest" placeholder="Leave here the species you want to suggest !" class="requests">
+                <span id="labelChampLibre" class="hidden">Champ libre :</span>
+            </div>
+
+            <div>
+                <label class="requests">
+                    <input type="checkbox" id="accepteConditions" required>
+                    I accept the terms of services and confidentiality policy.
+                </label>
+            </div>
+        
+            <a href="requests.html" class="requests-send">Send</a>
+        </form>
+
+        <!-- <div class="requests">
             <div class="request-form">
                 <div class="bar">
                     <p>Request a reptile you think should be in the website here :</p>
@@ -94,7 +178,7 @@
             <br>
         </div>
         
-    </div>
+    </div> -->
     
     <footer>
         <div>
